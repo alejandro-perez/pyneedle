@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PyNeedle
+Comment=Find your files in a convenient way
+TryExec=pyneedle
+Exec=pyneedle
+Icon=edit-find
+StartupNotify=true
+Type=Application
+
