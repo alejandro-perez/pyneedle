@@ -23,7 +23,8 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
-
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Pango, Gio, GdkPixbuf, Gdk, GLib, GObject
 import sys, subprocess, time, os, argparse, html
 
