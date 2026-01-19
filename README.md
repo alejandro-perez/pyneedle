@@ -8,17 +8,15 @@ PyNeedle is a convenient tool created to allow you to quickly search for files i
 
 ### How do I get set up? ###
 
-* To install just execute: python2 setup.py install
+* To install just execute: python setup.py install
 
 ### How do I use it? ###
-First you have to select a search engine using the --engine command argument. You can select between:
+First you have to select a search engine using the `--engine` command argument. You can select between:
 
-* tracker: uses tracker asynchronous search (recommended)
-
-* recoll: uses recoll. Searches are executed in a single thread (not recommended).
-
-* recoll_mp: uses recoll. Searches are executed in independent processes (recommended)
-
+* `tracker`: uses tracker asynchronous search
+* `recoll`: uses recoll. Searches are executed in a single thread.
+* `recoll_mp`: uses recoll. Searches are executed in independent processes (does not work with Python >= 3.14 and probably never will)
+* `recoll_nt: uses recoll. Searches are executed within a GLib event loop (no threads or processes).
 
 To perform a filename search, just start writing, and the results will appear as soon as they are available. You don't need to include any wildchar, as each word you write will be interpreted as contains(word1) and contains(word2). Order does not matter, so <pdf hello> and <hello pdf> will produce the same results.
 
@@ -27,13 +25,8 @@ To perform a FTS search, you can use the button at the right of the entry input,
 Some shortcuts:
 
 * Intro: open the selected file
-
 * Alt+Intro: open a terminal wherever the selected file is
-
 * Shift+Intro: open a file manager wherever the selected file is.
-
 * Ctrl+1: switch to tracker engine
-
 * Ctrl+2: switch to recoll_mp engine
-
 * Ctrl+3: switch to recoll engine
